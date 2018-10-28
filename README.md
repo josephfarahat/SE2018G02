@@ -1,7 +1,7 @@
 # PollMe audience management system 
 
 
-# Our software is designed to reduce the gap between the speaker and the audience.
+ Our software is designed to reduce the gap between the speaker and the audience.
 
 
 Team members are : 
