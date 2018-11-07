@@ -4,8 +4,9 @@
 		
 		public static function connect($database, $uid, $pwd) {
 			if(!empty(Database::$db)) return;
-
-			$dsn = "mysql:host=ql300.epizy.com;dbname=$database";
+                           $database = 'epiz_22959637_school';
+			
+			$dsn = "mysql:host=sql300.epizy.com;dbname=$database";
 			
 			try {
 		   		Database::$db = new PDO($dsn, $uid, $pwd);
