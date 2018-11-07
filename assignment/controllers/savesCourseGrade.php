@@ -4,7 +4,7 @@
 	Database::connect('school', 'root', '');
 	$id = safeGet("id", 0);
 	if($id==0) {
-		Grade::add(safeGet("name"));
+		Grade::add(safeGet("student_id"),safeGet("course_id"),safeGet("degree"),safeGet("examine_at") );
 	} else {
 		$grade = new Grade($id);
 		$grade->student_id = safeGet("student_id");
