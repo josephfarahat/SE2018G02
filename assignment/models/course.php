@@ -13,9 +13,9 @@
 			}
 		}
 
-		public static function add($name) {
-			$sql = "INSERT INTO courses (name) VALUES (?)";
-			Database::$db->prepare($sql)->execute([$name]);
+		public static function add($name,$max_degree,$study_year) {
+			$sql = "INSERT INTO courses (name,max_degree,study_year) VALUES (?,?,?)";
+			Database::$db->prepare($sql)->execute([$name,$max_degree,$study_year]);
 		}
 		
 		public function delete() {

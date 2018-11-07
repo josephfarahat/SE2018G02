@@ -13,9 +13,10 @@
 			}
 		}
 
-		public static function add($student_id) {
-			$sql = "INSERT INTO grades (student_id) VALUES (?)";
-			Database::$db->prepare($sql)->execute([$student_id]);
+		public static function add($student_id,$course_id,$degree,$examine_at) {
+			$sql = "INSERT INTO grades (student_id,course_id,degree,examine_at) VALUES (?,?,?,?)";
+			Database::$db->prepare($sql)->execute([$student_id,$course_id,$degree,$examine_at]);
+			
 		}
 		
 		public function delete() {
