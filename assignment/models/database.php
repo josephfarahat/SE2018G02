@@ -4,11 +4,9 @@
 		
 		public static function connect($database, $uid, $pwd) {
 			if(!empty(Database::$db)) return;
-                           $database = 'epiz_22959637_school';
+
+			$dsn = "mysql:host=localhost;dbname=$database";
 			
-			$dsn = "mysql:host=sql300.epizy.com;dbname=$database";
-			$uid = 'epiz_22959637';
-$pwd = 'A123456789';
 			try {
 		   		Database::$db = new PDO($dsn, $uid, $pwd);
 			} catch(PDOException $e){
