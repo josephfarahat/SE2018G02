@@ -3,37 +3,36 @@
 
 	include_once('./controllers/common.php');
 	
-	include_once('./models/course.php');
+	include_once('./models/grade.php');
 	Database::connect('school', 'root', '');
+	
+	
 	include_once('./components/head.php');
-?>
+	?>
 
 	
     <table class="table table-striped">
     	<thead>
 	    	<tr>
-	      		<th scope="col">Student Name</th>
-	      		<th scope="col">Course Name</th>
+	      		<th scope="col">Name</th>
+	      		<th scope="col">Degree Name</th>
 					<th scope="col">Grade</th>
+	    	</tr>
 					
 	      		<th scope="col"></th>
-	    	</tr>
 	  	</thead>
 	  	<tbody>
 		  	<?php	
-				$courses = Course::all(safeGet('keywords'));
-				foreach ($courses as $course) {
+				$grades = Grade::all_custom(safeGet('keywords'));
+				
+				foreach ($grades as $grade) {
 			?>
     		<tr>
-    			<td><?=$course->id?></td>
-    			<td><?=$course->name?></td>
-				<td><?=$course->max_degree?></td>
-				<td><?=$course->study_year?></td>
-    			
-    				
-				
-    		</tr> 
-    		<?php } ?> 
+    			<td><?=$grade['std']?></td>
+    			<td><?=$grade['degree']?></td>
+				<td><?=$grade['crs']?> </td>
+    		</tr>
+    		<?php } ?>
     	</tbody>
     </table>  
 <?php include_once('./components/tail.php') ?> 
