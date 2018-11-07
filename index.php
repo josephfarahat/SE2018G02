@@ -1,5 +1,5 @@
 <?php 
 
-header('Location: ../assignment');
+echo ' I am paula ragheb ' ;
 
 ?>
