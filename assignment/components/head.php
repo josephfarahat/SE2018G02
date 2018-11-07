@@ -61,7 +61,7 @@
 			
 			
           </ul>
-          <form action="./students.php" class="form-inline mt-2 mt-md-0">
+          <form action="" class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" name="keywords" placeholder="Search" aria-label="Search" value="<?=safeGet('keywords')?>">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
