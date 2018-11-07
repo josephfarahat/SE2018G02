@@ -7,7 +7,8 @@
                            $database = 'epiz_22959637_school';
 			
 			$dsn = "mysql:host=sql300.epizy.com;dbname=$database";
-			
+			$uid = 'epiz_22959637';
+$pwd = 'A123456789';
 			try {
 		   		Database::$db = new PDO($dsn, $uid, $pwd);
 			} catch(PDOException $e){
