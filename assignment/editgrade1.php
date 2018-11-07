@@ -10,7 +10,7 @@
     <h2 class="mt-4"><?=($id)?"Edit":"Add"?> Grade</h2>
 
     <form action="controllers/savesCourseGrade.php" method="get">
-    	<input type="hidden" name="id" value="<?=$grade->get('id')?>">
+    	<input type="hidden" name="id" value="<?=$id?>">
 		<div class="card">
 			<div class="card-body">
 			
