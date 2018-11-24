@@ -1,0 +1,14 @@
+   #Client
+-Login
+-Instant Feedback (thumbs up / thumbs down / take a break / go slower/go faster)
+-Answering Questions (MCQ / Text Questions)
+-File Download
+
+#Admin
+-Login
+-Site settings edit (save site settings in a settings.json file)
+-MCQ Questions Entry
+-Text Questions Entry
+-Topic Session Creator
+-Instant Feedback Viewing (realtime)
+-Answers View
