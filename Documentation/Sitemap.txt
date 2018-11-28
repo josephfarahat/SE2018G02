@@ -3,6 +3,7 @@
 -Instant Feedback (thumbs up / thumbs down / take a break / go slower/go faster)
 -Answering Questions (MCQ / Text Questions)
 -File Download
+-Inquiring
 
 #Admin
 -Login
@@ -12,3 +13,4 @@
 -Topic Session Creator
 -Instant Feedback Viewing (realtime)
 -Answers View
+-Viewing Inquiries
