@@ -28,6 +28,10 @@ if(isset($_GET['logout']) && !empty($_GET['logout'] ) )
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
+	      <li class="active"><a href="#">Insert Poll</a></li>
+	  <li class="active"><a href="#">Settings</a></li>
+	  <li class="active"><a href="#">View Answers</a></li>
+	  <li class="active"><a href="#">My Feedback</a></li>
       <li><a href="?logout=true">Logout</a></li>
     </ul>
   </div>
