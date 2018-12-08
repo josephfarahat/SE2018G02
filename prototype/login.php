@@ -34,17 +34,17 @@ echo '</script>';
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+ <nav class="navbar navbar-inverse">
 <div class="container">
-  <h2>Login Page</h2>
+  <h2 style="color:LightBlue;">Login Page</h2>
   <form method="post">
     <div class="form-group">
       <label for="usr">User Name:</label>
-      <input type="text" class="form-control" name="user" id="usr">
+      <input  style="color:LightGreen;" type="text" class="form-control" name="user" id="usr">
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" name="pass" id="pwd">
+      <input style="color:LightGreen;" type="password" class="form-control" name="pass" id="pwd">
     </div>
 	<div class="form-group">
       
@@ -52,6 +52,6 @@ echo '</script>';
     </div>
   </form>
 </div>
-
+	</nav>
 </body>
 </html>
