@@ -1,1 +1,1 @@
-<?header("Location: /prototype")
+<?php header("Location: /prototype")
