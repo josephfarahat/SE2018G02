@@ -39,12 +39,12 @@ echo '</script>';
   <h2 style="color:LightBlue;">Login Page</h2>
   <form method="post">
     <div class="form-group">
-      <label for="usr">User Name:</label>
-      <input  style="color:LightGreen;" type="text" class="form-control" name="user" id="usr">
+      <label style="color:LightGreen;" for="usr">User Name:</label>
+      <input   type="text" class="form-control" name="user" id="usr">
     </div>
     <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input style="color:LightGreen;" type="password" class="form-control" name="pass" id="pwd">
+      <label style="color:LightGreen;" for="pwd">Password:</label>
+      <input  type="password" class="form-control" name="pass" id="pwd">
     </div>
 	<div class="form-group">
       
