@@ -1,1 +1,5 @@
-<?php header("Location: /prototype")
+<?php 
+
+echo "Hello world";
+
+?>
