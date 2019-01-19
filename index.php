@@ -1,5 +1,5 @@
 <?php 
 
-header("Location: Source");
-
+//header("Location: Source");
+phpinfo();
 ?>
