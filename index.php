@@ -1,7 +1,7 @@
 <?php 
 
-//header("Location: Source");
+header("Location: Source");
 //phpinfo();
-print_r( get_loaded_extensions() );
+//print_r( get_loaded_extensions() );
 
 ?>
