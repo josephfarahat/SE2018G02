@@ -1,4 +1,14 @@
 <?php
+
+
+session_start();
+
+if(isset($_SESSION['login']) )
+if($_SESSION['login'] === 1)
+	header('Location: index.php');
+
+
+
 $user = "user";
 $pass = "pass";
 
@@ -8,6 +18,9 @@ if(!empty($_POST["user"]) && !empty($_POST["pass"]) )
   if($valid)
     {
     echo "login successful";
+    $_SESSION['login'] = 1;
+	header('Location: index.php');
+	
     }
   else
     {
