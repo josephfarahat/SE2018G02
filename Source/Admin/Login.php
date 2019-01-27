@@ -1,7 +1,18 @@
-<?ph
-$valid = ( 
+<?php
+$user = "user";
+$pass = "pass";
+
 if(!empty($_POST["user"]) && !empty($_POST["pass"]) )
   {
+  $valid = ( $_POST["user"] == $user) && ($_POST["pass"] == $pass);
+  if($valid)
+    {
+    echo "login successful";
+    }
+  else
+    {
+    echo "user and password combination is invalid";
+    }
   }
 ?>
 <!DOCTYPE HTML>
