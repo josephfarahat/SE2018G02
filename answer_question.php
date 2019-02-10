@@ -1,42 +1,5 @@
 
 <?php
-$q = "";
-$a = "";
-$b = "";
-$c = "";
-$d = "";
-$e = "";
-$f = "";
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "questions";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-$sql1="SELECT *
-FROM question WHERE id=1";
-$result = $conn->query($sql1);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-       $q = $row["question"];
-       $a = $row["A"];
-       $b = $row["B"];
-       $c = $row["C"];
-       $d = $row["D"];
-       $e = $row["E"];
-       $f = $row["F"];
-    }
-} else {
-    echo "0 results";
-}
-
 echo"<!DOCTYPE html>
 
 <html xmlns='http://www.w3.org/1999/xhtml'>
@@ -48,7 +11,7 @@ echo"<!DOCTYPE html>
     <!--<link rel='icon' href='imgs/favicon.ico' />-->
     <title>
 
-        Admin
+        Answer Question
 
     </title>
 
@@ -85,12 +48,13 @@ echo"<!DOCTYPE html>
             -webkit-align-items: center !important;
             -ms-flex-align: center !important;
             align-items: center !important;
-            height: 100%;
+            
             -webkit-box-orient: vertical !important;
             -webkit-box-direction: normal !important;
             -webkit-flex-direction: column !important;
             -ms-flex-direction: column !important;
             flex-direction: column !important;
+                margin-bottom: 30px;
         }
 
 
@@ -114,10 +78,13 @@ echo"<!DOCTYPE html>
                 display: inline-block;
                 padding-bottom: 13px;
             }
-
+span.QNo {
+   
+    color: #000;
+    font-size: 25px;
+}
         form .form-group .form-control {
-            display: block;
-            width: 100%;
+           
             height: calc(2.25rem + 2px);
             padding: 0.375rem 0.75rem;
             font-size: 1rem;
@@ -125,21 +92,12 @@ echo"<!DOCTYPE html>
             color: #495057;
             background-color: #fff;
             background-clip: padding-box;
-            border: 1px solid #ced4da;
+            border: 0px solid #ced4da;
             border-radius: 0.25rem;
             transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
             outline: none;
             border: 0;
-            background-image: -webkit-gradient(linear, left top, left bottom, from(#002757), to(#002757)), -webkit-gradient(linear, left top, left bottom, from(#747c8a), to(#747c8a));
-            background-image: -webkit-linear-gradient(#002757, #002757), -webkit-linear-gradient(#747c8a, #747c8a);
-            background-image: -o-linear-gradient(#002757, #002757), -o-linear-gradient(#747c8a, #747c8a);
-            background-image: linear-gradient(#002757, #002757), linear-gradient(#747c8a, #747c8a);
-            -webkit-background-size: 0 2px, 100% 1px;
-            background-size: 0 2px, 100% 1px;
-            background-repeat: no-repeat;
-            background-position: center bottom, center -webkit-calc(100% - 1px);
-            background-position: center bottom, center calc(100% - 1px);
-            background-color: rgba(0, 0, 0, 0);
+           
             -webkit-transition: background 0s ease-out;
             -o-transition: background 0s ease-out;
             transition: background 0s ease-out;
@@ -148,7 +106,9 @@ echo"<!DOCTYPE html>
             box-shadow: none;
             border-radius: 0;
             padding: 0;
-            color: #a9a9a9;
+            color: #000;
+            font-size: 25px;
+                margin-bottom: 10px;
         }
 
             form .form-group .form-control:focus {
@@ -167,8 +127,9 @@ echo"<!DOCTYPE html>
             }
 
         .answer-container {
-            margin-top: 30px;
-            padding-bottom:20px;
+                padding-left: 15px;
+             padding-bottom: 15px;
+    margin-bottom: 10px;
         }
 
         .control-indicator {
@@ -183,10 +144,12 @@ echo"<!DOCTYPE html>
             border-style: solid;
             border-color: rgb(85, 85, 85);
             border-image: initial;
+            
         }
 
         .answer-options {
             position: relative;
+                padding-bottom: 5px;
         }
 
             .answer-options .form-group {
@@ -219,69 +182,208 @@ echo"<!DOCTYPE html>
              background: rgb(255, 255, 255);
              color: rgb(10, 134, 234);
         }
+          .QuestionRow{
+            position:relative;
+          }
+        .QuestionRow:before{
+            content:'';
+            position:absolute;
+            width:20%;
+            height:4px;
+            background-color: rgb(10, 134, 234);
+             bottom:0px;
+            right: calc(-75px + 50%);
+        }
+        .QuestionRow:nth-last-child(2):before {
+
+          display:none;
+        }
+       
+
+ .custom-control {
+    position: relative;
+    display: block;
+    min-height: 1.5rem;
+  
+}
+[type=radio]:checked, [type=radio]:not(:checked) {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+
+}
+.custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+        cursor: pointer;
+        padding-left: 25px;
+}
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #007bff;
+    background-color: #007bff;
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::after{
+
+            position: absolute;
+    top: 4px;
+    left: 5px;
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    background-color: #fff;
+}
+
+.custom-radio .custom-control-label::before {
+    border-radius: 50%;
+}
+.custom-control-label::before {
+    position: absolute;
+    top: -.1rem;
+    left: 0rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    content: '';
+    background-color: #fff;
+    border: #adb5bd solid 1px;
+}
+
     </style>
 </head>
 <body>
-    <div class='survey-question-wrapper  multiple-choice-question '>
+ <div class='survey-question-wrapper  multiple-choice-question '>
         <h2>
             Answer Question!
         </h2>
-        <form action ='answerpoll.php' method='GET'>
+<form action ='answerpoll.php' method='GET' >
+    ";
+$q = "";
+$z = "";
+$x = "";
+$c = "";
+$v = "";
+$b = "";
+$n = "";
+$d = "";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "poll";
+
+// Create connect
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+$sql1="SELECT ID,questions,answer1,answer2,answer3,answer4,answer5,answer5,answer6
+FROM yomna ";
+$result = $conn->query($sql1);
+$I=1;
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+       $q = $row["questions"];
+       $z = $row["answer1"];
+       $x = $row["answer2"];
+       $c = $row["answer3"];
+       $v = $row["answer4"];
+       $b = $row["answer5"];
+       $n = $row["answer6"];
+       $d =$row["ID"];
+        echo        "
+       
+        <div class='QuestionRow'>
+ 
+
 
             <div class='form-group '>
-                <input type='text' class='form-control' required='' name='questions' value='".$q."' disabled>
+            <span class='QNo'>Q$I:</span>
+                <input type='text' class='form-control' required='' name='questions".$d."' value='".$q."' disabled>
             </div>
 
             <div class='answer-container drag-answer col-1x'>
                 <div class='answer-options  '>
-                    <div class='control-indicator'></div>
-                    <div class='form-group '>
-                        <input type='option' class='form-control' required='' name='answers1' placeholder='Option 1'  value='".$a."
-                        ' disabled>
+                   
+                    <div class='custom-control custom-radio'>
+                        <input type='radio' class='custom-control-input' required='' id='radio1".$I."' name='radio".$d."' placeholder='Option 1'value='a1'>
+                        <label class='custom-control-label' for='radio1".$I."'>$z</label>
                     </div>
                 </div>
                 <div class='answer-options  '>
-                    <div class='control-indicator'></div>
-                    <div class='form-group '>
-                        <input type='option' class='form-control' required='' name='answers2' placeholder='Option 2'value='".$b."' disabled>
+                   
+                    <div class='custom-control custom-radio '>
+                        <input type='radio' class='custom-control-input' required='' id='radio2".$I."' name='radio".$d."' placeholder='Option 2'value='a2'>
+                        <label class='custom-control-label' for='radio2".$I."'>$x</label>
+                      
                     </div>
                 </div>
                 <div class='answer-options  '>
-                    <div class='control-indicator'></div>
-                    <div class='form-group '>
-                        <input type='option' class='form-control' required='' name='answers3' placeholder='Option 3'value='".$c."' disabled>
+                   
+                    <div class='custom-control custom-radio '>
+                        <input type='radio' class='custom-control-input' required='' id='radio3".$I."' name='radio".$d."' placeholder='Option 3'value='a3'>
+                        <label class='custom-control-label' for='radio3".$I."'>$c</label>
+
+                       
                     </div>
                 </div>
                 <div class='answer-options  '>
-                    <div class='control-indicator'></div>
-                    <div class='form-group '>
-                        <input type='option' class='form-control' required='' name='answers4' placeholder='Option 4'value='".$d."' disabled>
+                  
+                    <div class='custom-control custom-radio '>
+                        <input type='radio' class='custom-control-input' required='' id='radio4".$I."' name='radio".$d."' placeholder='Option 4'value='a4'>
+                        <label class='custom-control-label' for='radio4".$I."'>$v</label>
                     </div>
                 </div>
                  <div class='answer-options  '>
-                    <div class='control-indicator'></div>
-                    <div class='form-group '>
-                        <input type='option' class='form-control' required='' name='answers5' placeholder='Option 5'value='".$e."' disabled>
+                   
+                    <div class='custom-control custom-radio '>
+                        <input type='radio' class='custom-control-input' required='' id='radio5".$I."' name='radio".$d."' placeholder='Option 5'value='a5'>
+
+                        <label class='custom-control-label' for='radio5".$I."'>$b</label>
+                        
                     </div>
                 </div>
                   <div class='answer-options  '>
-                      <div class='control-indicator'></div>
-                      <div class='form-group '>
-                        <input type='option' class='form-control' required='' name='answers6' placeholder='Option 6'value='".$f."' disabled>
+                     
+                      <div class='custom-control custom-radio '>
+                        <input type='radio' class='custom-control-input' required='' id='radio6".$I."' name='radio".$d."' placeholder='Option 6'value='a6'>
+
+                        <label class='custom-control-label' for='radio6".$I."'>$n</label>
+                        
                     </div>
                 </div>
-            </div>
-            <button class='add-question-btn' type='submit'>Submit</button>
-        </form>
-    </div>
+           
+       
+
 
 
 <span name='Question'></span>
 
+</div>
+ </div>
 
 
-</body>
-</html> ";
+ ";
+ $I++;
+    }
+} else {
+    echo "0 results";
+}
+ echo "
+   <input class='add-question-btn' name='amir' value='submit' type='submit'></input>
+    </form>
+        </div>
+ </body>
+</html>";
+     
 
 
 ?>
