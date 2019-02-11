@@ -1,0 +1,171 @@
+body {
+  background-color: white;
+}
+.pollme {
+  text-align: center;
+  text-transform: uppercase;
+  color: #2B87D8 ;
+}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+ul.topnav li {float: left;}
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: white;color: black;}
+
+ul.topnav li.right {float: right;}
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+.login {
+	margin-left: 30%;
+	margin-top: 200px;
+    border: 0.2px solid #008DA9 ;
+    padding: 8px;
+    width: 500px;
+    background-color: #F5F6F6 ;
+}
+.loginbody{
+	background-color: #008DA9;
+}
+.button {
+  background-color:#008DA9 ; 
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 1px 1px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.signupclass {
+	margin-left: 30%;
+	margin-top :100px;
+    border: 0.2px solid #008DA9 ;
+    padding: 8px;
+
+    width: 500px;
+    background-color: #F5F6F6 ;
+}
+.feedbackclass {
+  margin-left: 30%;
+  margin-top :100px;
+    border: 0.2px solid #008DA9 ;
+    padding: 12px;
+
+    width: 500px;
+    background-color: #F5F6F6 ;
+
+}
+
+.forgetpassclass {
+  margin-left: 30%;
+  margin-top :100px;
+    border: 0.2px solid #008DA9 ;
+    padding: 8px;
+
+    width: 500px;
+    background-color: #F5F6F6 ;
+
+}
+
+.button2 {
+  background-color:#white ; 
+  border: none;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 1px 1px;
+  cursor: pointer;
+  border-radius: 12px;}
+}
+
+.fa {
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+   position: absolute;
+  bottom: 8px;
+  right: 190px;
+  width: 75px;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+   position: absolute;
+  bottom: 8px;
+  right: 110px;
+  width: 75px;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+   position: absolute;
+  bottom: 8px;
+  right: 30px;
+  width: 75px;
+}
+.bottomleft {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+.topleft {
+  position: absolute;
+  top: 100px;
+  left: 130px;
+  font-size: 110px;
+}
+.paragraph{
+	position: absolute;
+  top: 230px;
+  left: 135px;
+  font-size: 20px;
+  font-weight: 10;
+}
+
+}
+
+
