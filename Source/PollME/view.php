@@ -13,6 +13,7 @@ text-align:center;
 overflow:hidden;
 font: 14px "Trebuchet MS", sans serif;
 }
+
 .grafico{
     position: relative;
     height: 300px;
@@ -32,6 +33,7 @@ width: 100%;
 float:left;
 margin: -8px 0 0 -40px;
 }
+
 table{
 width:27%;
     border: 1px solid #eee;
@@ -125,29 +127,35 @@ $(".col"+index).animate({height: ha+"%"}, 1500).html("<div>"+ha+"</div>");
 $(document).ready(function(){
 viewGraph();
 });
+
     </script>
 </head>
 <body>';
 $servername = "localhost";
 $username = "root";
 $password = "";
+
 $dbname = "poll";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-$sql = "SELECT COUNT(ID) As count FROM question";
+$sql = "SELECT COUNT(ID) As count FROM yomna";
+
 $result2 = $conn->query($sql);
+
 if ($result2->num_rows > 0) {
     while($row = $result2->fetch_assoc()) {
         $id=$row["count"];
     }
 } 
+
 for ($i=0;$i<$id;$i++)
 {
     $s = $i+1;
-    $sql = "SELECT r1,r2,r3,r4,r5,r6,no FROM question WHERE ID =".$s;
+    $sql = "SELECT r1,r2,r3,r4,r5,r6,no FROM yomna WHERE ID =".$s;
 $result2 = $conn->query($sql);
+
 if ($result2->num_rows > 0) {
     while($row = $result2->fetch_assoc()) {
         $a=$row["r1"];
@@ -158,12 +166,15 @@ if ($result2->num_rows > 0) {
         $f=$row["r6"];
         $no=$row["no"];
         echo'<div id="contenitore">
+
     <div class="NoUser">
         '.$no.' audience
         
     </div>
+
     <!-- make for loop here   -->
 <div class="SurveyRow">
+
 <table>
 <caption>Question '.$s.'</caption>
 <tbody>
@@ -174,25 +185,109 @@ if ($result2->num_rows > 0) {
 <tr><td>Answer 5</td><td>'.$e.'</td><td style="background-color:#1F55D0">&nbsp;</td></tr>
 <tr><td>Answer 6</td><td>'.$f.'</td><td style="background-color:#396bdf">&nbsp;</td></tr>
 </tbody></table>
+
 <div class="RightBar">
 <div class="grafico">
-<div class="riga" style="top:25%"><div>30</div></div>
-<div class="riga" style="top:50%"><div>20</div></div>
-<div class="riga" style="top:75%"><div>10</div></div>
+<div class="riga" style="top:25%"><div></div></div>
+<div class="riga" style="top:50%"><div></div></div>
+<div class="riga" style="top:75%"><div></div></div>
+';
+if($i == 0)
+{echo '
 <div class="col0 column" style="left:0; background-color:#021C59;" ></div>
 <div class="col1 column" style="left:18%; background-color:#042778;" ></div>
 <div class="col2 column" style="left:30%; background-color:#063195;" ></div>
 <div class="col3 column" style="left:50%; background-color:#0940BE;" ></div>
-<div class="col2 column" style="left:65%; background-color:#1F55D0;" ></div>
-<div class="col3 column" style="left:85%; background-color:#396bdf;" ></div>
+<div class="col4 column" style="left:65%; background-color:#1F55D0;" ></div>
+<div class="col5 column" style="left:85%; background-color:#396bdf;" ></div>';
+}
+if($i == 1)
+{echo '
+<div class="col6 column" style="left:0; background-color:#021C59;" ></div>
+<div class="col7 column" style="left:18%; background-color:#042778;" ></div>
+<div class="col8 column" style="left:30%; background-color:#063195;" ></div>
+<div class="col9 column" style="left:50%; background-color:#0940BE;" ></div>
+<div class="col10 column" style="left:65%; background-color:#1F55D0;" ></div>
+<div class="col11 column" style="left:85%; background-color:#396bdf;" ></div>';
+}
+if($i == 2)
+{echo '
+<div class="col12 column" style="left:0; background-color:#021C59;" ></div>
+<div class="col13 column" style="left:18%; background-color:#042778;" ></div>
+<div class="col14 column" style="left:30%; background-color:#063195;" ></div>
+<div class="col15 column" style="left:50%; background-color:#0940BE;" ></div>
+<div class="col16 column" style="left:65%; background-color:#1F55D0;" ></div>
+<div class="col17 column" style="left:85%; background-color:#396bdf;" ></div>';
+}
+if($i == 3)
+{echo '
+<div class="col18 column" style="left:0; background-color:#021C59;" ></div>
+<div class="col19 column" style="left:18%; background-color:#042778;" ></div>
+<div class="col20 column" style="left:30%; background-color:#063195;" ></div>
+<div class="col21 column" style="left:50%; background-color:#0940BE;" ></div>
+<div class="col22 column" style="left:65%; background-color:#1F55D0;" ></div>
+<div class="col23 column" style="left:85%; background-color:#396bdf;" ></div>';
+}
+if($i == 4)
+{echo '
+<div class="col24 column" style="left:0; background-color:#021C59;" ></div>
+<div class="col25 column" style="left:18%; background-color:#042778;" ></div>
+<div class="col26 column" style="left:30%; background-color:#063195;" ></div>
+<div class="col27 column" style="left:50%; background-color:#0940BE;" ></div>
+<div class="col28 column" style="left:65%; background-color:#1F55D0;" ></div>
+<div class="col29 column" style="left:85%; background-color:#396bdf;" ></div>';
+}
+if($i == 5)
+{echo '
+<div class="col30 column" style="left:0; background-color:#021C59;" ></div>
+<div class="col31 column" style="left:18%; background-color:#042778;" ></div>
+<div class="col32 column" style="left:30%; background-color:#063195;" ></div>
+<div class="col33 column" style="left:50%; background-color:#0940BE;" ></div>
+<div class="col34 column" style="left:65%; background-color:#1F55D0;" ></div>
+<div class="col35 column" style="left:85%; background-color:#396bdf;" ></div>';
+}
+if($i == 6)
+{echo '
+<div class="col36 column" style="left:0; background-color:#021C59;" ></div>
+<div class="col37 column" style="left:18%; background-color:#042778;" ></div>
+<div class="col38 column" style="left:30%; background-color:#063195;" ></div>
+<div class="col39 column" style="left:50%; background-color:#0940BE;" ></div>
+<div class="col40 column" style="left:65%; background-color:#1F55D0;" ></div>
+<div class="col41 column" style="left:85%; background-color:#396bdf;" ></div>';
+}
+if($i == 7)
+{echo '
+<div class="col42 column" style="left:0; background-color:#021C59;" ></div>
+<div class="col43 column" style="left:18%; background-color:#042778;" ></div>
+<div class="col44 column" style="left:30%; background-color:#063195;" ></div>
+<div class="col45 column" style="left:50%; background-color:#0940BE;" ></div>
+<div class="col46 column" style="left:65%; background-color:#1F55D0;" ></div>
+<div class="col47 column" style="left:85%; background-color:#396bdf;" ></div>';
+}
+if($i == 8)
+{echo '
+<div class="col48 column" style="left:0; background-color:#021C59;" ></div>
+<div class="col49 column" style="left:18%; background-color:#042778;" ></div>
+<div class="col50 column" style="left:30%; background-color:#063195;" ></div>
+<div class="col51 column" style="left:50%; background-color:#0940BE;" ></div>
+<div class="col52 column" style="left:65%; background-color:#1F55D0;" ></div>
+<div class="col53 column" style="left:85%; background-color:#396bdf;" ></div>';
+}
+echo '
 </div>
 </div>
 </div>  
+
+
     <!-- end for loop here   -->
+
+
+
 </div>
 ';
     }
 } 
+
 }
 echo '</body>
 </html>';
