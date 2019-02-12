@@ -1,7 +1,5 @@
-
 <?php
 echo"<!DOCTYPE html>
-
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
     <meta charset='utf-8' />
@@ -10,15 +8,25 @@ echo"<!DOCTYPE html>
     <meta name='author' />
     <!--<link rel='icon' href='imgs/favicon.ico' />-->
     <title>
-
         Answer Question
-
     </title>
-
     <!-------------------------------------------------------------------------------->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+<!-- jQuery library -->
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+<!-- Latest compiled JavaScript -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js'></script>
+           <link rel='stylesheet'
+               type = 'text/css'
+               href='index.css'
+               
+           />
     <script src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
     <script src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
     <![endif]-->
@@ -26,7 +34,6 @@ echo"<!DOCTYPE html>
         html {
             height: 100%;
         }
-
         body {
             font-family: sans-serif;
             background-color: #F6FAFD !important;
@@ -34,7 +41,6 @@ echo"<!DOCTYPE html>
             font-size: 14px;
             margin: 0;
         }
-
         .survey-question-wrapper {
             -webkit-box-pack: center !important;
             -webkit-justify-content: center !important;
@@ -56,14 +62,11 @@ echo"<!DOCTYPE html>
             flex-direction: column !important;
                 margin-bottom: 30px;
         }
-
-
             .survey-question-wrapper h2 {
                 font-size: 36px;
                 color: #1b87e6;
                 font-weight: 200;
             }
-
             .survey-question-wrapper form {
                 box-shadow: rgba(0, 0, 0, 0.2) 0px -1px 1px 0px, rgba(0, 0, 0, 0.3) 0px 3px 5px 0px;
                 z-index: 2;
@@ -110,7 +113,6 @@ span.QNo {
             font-size: 25px;
                 margin-bottom: 10px;
         }
-
             form .form-group .form-control:focus {
                 outline: none;
                 background-image: -webkit-gradient(linear, left top, left bottom, from(#002757), to(#002757)), -webkit-gradient(linear, left top, left bottom, from(#747c8a), to(#747c8a));
@@ -125,13 +127,11 @@ span.QNo {
                 -o-transition-duration: 0.3s;
                 transition-duration: 0.3s;
             }
-
         .answer-container {
                 padding-left: 15px;
              padding-bottom: 15px;
     margin-bottom: 10px;
         }
-
         .control-indicator {
             width: 16px;
             height: 16px;
@@ -146,18 +146,15 @@ span.QNo {
             border-image: initial;
             
         }
-
         .answer-options {
             position: relative;
                 padding-bottom: 5px;
         }
-
             .answer-options .form-group {
                 width: 80%;
                 padding-left: 35px;
                 margin-bottom: 15px;
             }
-
         .add-question-btn {
             width: auto;
           
@@ -195,11 +192,9 @@ span.QNo {
             right: calc(-75px + 50%);
         }
         .QuestionRow:nth-last-child(2):before {
-
           display:none;
         }
        
-
  .custom-control {
     position: relative;
     display: block;
@@ -210,7 +205,6 @@ span.QNo {
     position: absolute;
     opacity: 0;
     pointer-events: none;
-
 }
 .custom-control-label {
     position: relative;
@@ -225,7 +219,6 @@ span.QNo {
     background-color: #007bff;
 }
 .custom-radio .custom-control-input:checked~.custom-control-label::after{
-
             position: absolute;
     top: 4px;
     left: 5px;
@@ -239,7 +232,6 @@ span.QNo {
     background-size: 50% 50%;
     background-color: #fff;
 }
-
 .custom-radio .custom-control-label::before {
     border-radius: 50%;
 }
@@ -255,11 +247,18 @@ span.QNo {
     background-color: #fff;
     border: #adb5bd solid 1px;
 }
-
     </style>
 </head>
 <body>
+<ul class='topnav'>
+  <li><a class='active' href='index.php'>Home</a></li>
+  <li><a href='answer_question.php'> Take Poll</a></li>
+  <li><a href='feedback2.html'>Give feedback</a></li>
+  
+  <li><a href='inquiry.html'>Inquiry</a></li>
+  <li class='right'><a href='login.php'>Are you Speaker?</a></li>
  <div class='survey-question-wrapper  multiple-choice-question '>
+ </ul>
         <h2>
             Answer Question!
         </h2>
@@ -277,7 +276,6 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "poll";
-
 // Create connect
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -285,7 +283,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 $sql1="SELECT ID,questions,answer1,answer2,answer3,answer4,answer5,answer5,answer6
-FROM yomna ";
+FROM question ";
 $result = $conn->query($sql1);
 $I=1;
 if ($result->num_rows > 0) {
@@ -301,15 +299,13 @@ if ($result->num_rows > 0) {
        $d =$row["ID"];
         echo        "
        
-        <div class='QuestionRow'>
+
+	   <div class='QuestionRow'>
  
-
-
             <div class='form-group '>
             <span class='QNo'>Q$I:</span>
                 <input type='text' class='form-control' required='' name='questions".$d."' value='".$q."' disabled>
             </div>
-
             <div class='answer-container drag-answer col-1x'>
                 <div class='answer-options  '>
                    
@@ -331,7 +327,6 @@ if ($result->num_rows > 0) {
                     <div class='custom-control custom-radio '>
                         <input type='radio' class='custom-control-input' required='' id='radio3".$I."' name='radio".$d."' placeholder='Option 3'value='a3'>
                         <label class='custom-control-label' for='radio3".$I."'>$c</label>
-
                        
                     </div>
                 </div>
@@ -346,7 +341,6 @@ if ($result->num_rows > 0) {
                    
                     <div class='custom-control custom-radio '>
                         <input type='radio' class='custom-control-input' required='' id='radio5".$I."' name='radio".$d."' placeholder='Option 5'value='a5'>
-
                         <label class='custom-control-label' for='radio5".$I."'>$b</label>
                         
                     </div>
@@ -355,22 +349,15 @@ if ($result->num_rows > 0) {
                      
                       <div class='custom-control custom-radio '>
                         <input type='radio' class='custom-control-input' required='' id='radio6".$I."' name='radio".$d."' placeholder='Option 6'value='a6'>
-
                         <label class='custom-control-label' for='radio6".$I."'>$n</label>
                         
                     </div>
                 </div>
            
        
-
-
-
 <span name='Question'></span>
-
 </div>
  </div>
-
-
  ";
  $I++;
     }
@@ -384,6 +371,4 @@ if ($result->num_rows > 0) {
  </body>
 </html>";
      
-
-
 ?>
