@@ -120,7 +120,7 @@ echo '
   <li><a href="feedback2.html">Give feedback</a></li>
   
   <li><a href="inquiry.html">Inquiry</a></li>
-   <li><a href="view_inq.php">View</a></li>
+    <li><a href="Attachmentdownload.php">Download</a></li>
   <li class="right"><a href="login.php">Are you Speaker?</a></li>
    
   </ul>
