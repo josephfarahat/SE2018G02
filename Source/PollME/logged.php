@@ -30,14 +30,67 @@
     		   />
            <!-- Latest compiled and minified CSS -->
 <style>
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
 
- .para{
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+
+
+
+.topleft {
+  top: 100px;
+  left: 130px;
+  font-size: 110px;
+}
+.paragraph{
+  top: 230px;
+  left: 135px;
+  font-size: 20px;
+  font-weight: 10;
+}
+
+
+
+
+		   .para{
   top: 270px;
   left: 135px;
   font-size: 20px;
   font-weight: 10;
 }
- .topp {
+		   .topp {
 	
   top: 150px;
   left: 130px;
@@ -67,7 +120,11 @@
 
 <p class="topp"> Poll Me</p>
 <p class="para">Welcome to PollMe, you're now logged in as Speaker, choose what you want to do from the upper bar</p>
-
+<footer class="footer">
+      <div class="container">
+        <p class="text-muted">Copyright 2019, Software Engineering Course, POLL ME. </p>
+      </div>
+    </footer>
       
   
 
