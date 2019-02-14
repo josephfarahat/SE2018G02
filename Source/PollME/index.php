@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -30,6 +29,42 @@
     		   />
            <!-- Latest compiled and minified CSS -->
 		   <style>
+           
+           html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
 		   .para{
   top: 270px;
   left: 135px;
@@ -57,10 +92,14 @@
    
   </ul>
  
- <a href="https://www.facebook.com/Poll-Me-2317018251900001/?eid=ARAZoGfUZYh_iFvHUp0t-jfPStyGkMNkQdWmr8mGarPCCitjEe9c6rMz8s6vj5naMvK4F22p40D3d4PK&_rdc=1&_rdr" class="fa fa-facebook"></a>
-<p class="bottomleft"> Copyright 2019, Software Engineering Course, POLL ME. </p>
+ 
 <p class="topp"> Poll Me</p>
 <p class="para">Welcome to PollMe, We offer  an efficient way of communication between a speaker and his audience.</p>
+<footer class="footer">
+      <div class="container">
+        <p class="text-muted">Copyright 2019, Software Engineering Course, POLL ME. </p>
+      </div>
+    </footer>
       
   
 
