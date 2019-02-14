@@ -36,7 +36,7 @@
   <li><a href="view.php">View Answers</a></li>
   <li><a href="view_feedback.php">View Feedback</a></li>
   <li><a href="view_inq.php">View Inquiry</a></li>
-   <li><a href="">Upload files</a></li>
+   <li><a href="Attachmentupload.php">Upload files</a></li>
   <li class="right"><a href="logout.php">logout </a></li>
   </ul>
    <a href="#" class="fa fa-facebook"></a>
