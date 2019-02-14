@@ -13,9 +13,23 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	           <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+           <link rel="stylesheet"
+               type = "text/css"
+               href="index.css"
+               
+           />
     <style>
         .feedback {
-            background-image: url('feedback.jpg');
+            background-image: url('feedback4.jpg');
             width: 100%;
             height: 100%;
             background-position: top center;
@@ -86,7 +100,7 @@
             font-family: 'Amatic SC', cursive;
             font-weight: bolder;
             text-transform: uppercase;
-            padding-right: 25px;
+            padding-right: 50px;
             color: #fff;
             -webkit-align-self: center !important;
             -ms-flex-item-align: center !important;
@@ -100,12 +114,13 @@
 		    border: 1px solid;
 		    box-shadow: none;
 		    padding: 5px 30px;
-		    margin: 15px auto;
+		   
 		    font-size: 40px;
 		    font-family: "Amatic SC",cursive;
 		    font-weight: bolder;
 		    text-transform: uppercase;
-		    cursor: :pointer;
+		    cursor: pointer;
+			margin-right: 50%;
 		}
 		input.submit:hover {
 			background-color: #fff;
@@ -125,7 +140,7 @@
             display: -webkit-flex !important;
             display: -ms-flexbox !important;
             display: flex !important;
-            height: 100%;
+               margin-top: 50px;
             -webkit-box-orient: vertical !important;
             -webkit-box-direction: normal !important;
             -webkit-flex-direction: column !important;
@@ -138,12 +153,25 @@
             display: -webkit-flex !important;
             display: -ms-flexbox !important;
             display: flex !important;
-            margin-bottom: 65px;
-            margin-right: 135px;
+            margin-bottom: 2%;
+            margin-right: 50%;
         }
 
             .checkbox:first-child {
-                margin-top: auto !important;
+                margin-top: 10% !important;
+            }
+            @media screen and (max-width: 600px){
+                .checkbox {
+
+    margin-right: 6%;
+}
+body {
+
+    height: 100%;
+}
+input.submit {
+    margin-bottom: 20px;
+}
             }
     </style>
 </head>
@@ -151,7 +179,20 @@
 
 
  <div class="feedback">
+ <div>
+   <ul class="topnav">
+  <li><a class="active" href="index.php">Home</a></li>
+  <li><a href="answer_question.php"> Take Poll</a></li>
+  <li><a href="feedback2.html">Give feedback</a></li>
 
+  
+  <li><a href="inquiry.html">Inquiry</a></li>
+    <li><a href="Attachmentdownload.php">Download files</a></li>
+  <li class="right"><a href="login.php">Are you Speaker?</a></li>
+   
+  </ul>
+  <h1 style="color:white;">&nbsp; Please tell the speaker about your opinion of the session</h1>
+  </div>
         <form class="form" action="feedback_result.php" method="GET">
             <div class="checkbox">
                 <label class="checkTitle">
@@ -180,7 +221,7 @@
             </div>
 
 
-            	<input type="submit" class="submit" value="Submit">
+            	<input type="submit" class="submit" value="Submit" href="submit.html">
         </form>
     </div>
 
