@@ -10,7 +10,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT ID, questions,answer1,answer2,answer3,answer4,answer5,answer6 FROM yomna";
+$sql = "SELECT ID, questions,answer1,answer2,answer3,answer4,answer5,answer6 FROM question";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
