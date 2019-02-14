@@ -14,19 +14,6 @@ echo"<!DOCTYPE html>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-
-<!-- jQuery library -->
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-
-<!-- Latest compiled JavaScript -->
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js'></script>
-           <link rel='stylesheet'
-               type = 'text/css'
-               href='index.css'
-               
-           />
     <script src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
     <script src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
     <![endif]-->
@@ -250,15 +237,7 @@ span.QNo {
     </style>
 </head>
 <body>
-<ul class='topnav'>
-  <li><a class='active' href='index.php'>Home</a></li>
-  <li><a href='answer_question.php'> Take Poll</a></li>
-  <li><a href='feedback2.html'>Give feedback</a></li>
-  
-  <li><a href='inquiry.html'>Inquiry</a></li>
-  <li class='right'><a href='login.php'>Are you Speaker?</a></li>
  <div class='survey-question-wrapper  multiple-choice-question '>
- </ul>
         <h2>
             Answer Question!
         </h2>
@@ -299,8 +278,7 @@ if ($result->num_rows > 0) {
        $d =$row["ID"];
         echo        "
        
-
-	   <div class='QuestionRow'>
+        <div class='QuestionRow'>
  
             <div class='form-group '>
             <span class='QNo'>Q$I:</span>
