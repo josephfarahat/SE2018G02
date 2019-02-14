@@ -3,20 +3,8 @@
 <html lang="en">
     <head>
       <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    	<title>
-          Poll me 
-    
-    	</title>
-    	<link rel="stylesheet"
-    		       type = "text/css"
-    		       href="bootstrap.css"
-
-    		   />
-           <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- jQuery library -->
@@ -29,6 +17,32 @@
                href="index.css"
                
            />
+
+
+    	<title>
+          Poll me 
+    
+    	</title>
+    	<link rel="stylesheet"
+    		       type = "text/css"
+    		       href="bootstrap.css"
+
+    		   />
+           <!-- Latest compiled and minified CSS -->
+		   <style>
+		   .para{
+  top: 270px;
+  left: 135px;
+  font-size: 20px;
+  font-weight: 10;
+}
+		   .topp {
+	
+  top: 150px;
+  left: 130px;
+  font-size: 90px;
+}
+</style>
            
 	</head> 
 	<body>
@@ -36,18 +50,17 @@
   <li><a class="active" href="index.php">Home</a></li>
   <li><a href="answer_question.php"> Take Poll</a></li>
   <li><a href="feedback2.html">Give feedback</a></li>
-  
   <li><a href="inquiry.html">Inquiry</a></li>
-   <li><a href="view_inq.php">View</a></li>
+  <li><a href="instantanswr.php">Quick question</a></li>
+  <li><a href="Attachmentdownload.php">Download files</a></li>
   <li class="right"><a href="login.php">Are you Speaker?</a></li>
    
   </ul>
-   <a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-google"></a>
+ 
+ <a href="https://www.facebook.com/Poll-Me-2317018251900001/?eid=ARAZoGfUZYh_iFvHUp0t-jfPStyGkMNkQdWmr8mGarPCCitjEe9c6rMz8s6vj5naMvK4F22p40D3d4PK&_rdc=1&_rdr" class="fa fa-facebook"></a>
 <p class="bottomleft"> Copyright 2019, Software Engineering Course, POLL ME. </p>
-<p class="topleft"> Poll Me</p>
-<p class="paragraph">Welcome to PollMe, We offer  an efficient way of communication between a speaker and his audience.</p>
+<p class="topp"> Poll Me</p>
+<p class="para">Welcome to PollMe, We offer  an efficient way of communication between a speaker and his audience.</p>
       
   
 
