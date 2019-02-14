@@ -99,6 +99,6 @@ if(strlen($val)>3){
 echo "<input type=checkbox name=box[] value='$val'>$val<br>";
 }
 }
-echo "<input type=submit value='Delete'></form>";
+echo "<input type='submit' value='Delete'></form>";
 ?>
 
