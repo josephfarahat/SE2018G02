@@ -6,13 +6,9 @@ include('security.php');
       $file_size = $_FILES['image']['size'];
       $file_tmp = $_FILES['image']['tmp_name'];
       $file_type = $_FILES['image']['type'];
-      //$file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
-      
-     
-      
       
          move_uploaded_file($file_tmp,"./Attachments/".$file_name);
-        // echo "Success";
+     
     
    }
 ?>
