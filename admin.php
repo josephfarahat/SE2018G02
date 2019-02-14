@@ -9,7 +9,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 
-$dbname = "new";
+$dbname = "poll";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -21,7 +21,7 @@ if ($conn->connect_error) {
 
 //select from db likes , dislikes 
 
-$sql = "SELECT likee, dislike FROM first";
+$sql = "SELECT likee, dislike FROM mrmr";
 $result2 = $conn->query($sql);
 
 if ($result2->num_rows > 0) {
