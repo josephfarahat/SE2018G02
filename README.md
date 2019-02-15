@@ -15,7 +15,9 @@
 8- حسن محمد حسن   
 9- حامد عبد الرحيم   
 
-Final BRD Link : https://github.com/josephfarahat/SE2018G02/blob/master/Documentation/BRD/PollMe(-BRD)-final%20version.docx
-Final SRS Link :https://github.com/josephfarahat/SE2018G02/blob/master/Documentation/SRS/SRS-PollMe-version%200.3.pdf
+###White Paper: https://github.com/josephfarahat/SE2018G02/blob/master/Documentation/White%20Paper%20_Overview.docx
+###Final BRD Link : https://github.com/josephfarahat/SE2018G02/blob/master/Documentation/BRD/PollMe(-BRD)-final%20version.docx
+###Final SRS Link :https://github.com/josephfarahat/SE2018G02/blob/master/Documentation/SRS/SRS-PollMe-version%200.3.pdf
+### Link of project : http://pollme.epizy.com
+### Manual for the website : https://github.com/josephfarahat/SE2018G02/blob/master/Documentation/Poll%20Me%20Manual.docx
 
-# Link of project : http://pollme.epizy.com/index.php
