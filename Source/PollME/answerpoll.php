@@ -6,10 +6,10 @@ $d=0;
 $e=0;
 $f=0;
 $no=0;
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "poll";
+$servername = "sql202.epizy.com";
+$username = "epiz_23357401";
+$password = "jpvgo0IE";
+$dbname = "epiz_23357401_Poll";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -80,29 +80,12 @@ $y++;
 
 
 echo '
+<!DOCTYPE html>
 <html lang="en">
     <head>
       <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<title>
-          Poll me 
-    
-    	</title>
-    	<link rel="stylesheet"
-    		       type = "text/css"
-    		       href="bootstrap.css"
-
-    		   />
-			   <style>
-			   .fnt {
-				     position: absolute;
-                     top: 200px;
-                     left: 130px;
-                     font-size: 50px;
-			   }
-			   </style>
-           <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- jQuery library -->
@@ -114,19 +97,103 @@ echo '
                type = "text/css"
                href="index.css"
                
-           /><ul class="topnav">
+           />
+
+
+    	<title>
+          Poll me 
+    
+    	</title>
+    	<link rel="stylesheet"
+    		       type = "text/css"
+    		       href="bootstrap.css"
+
+    		   />
+           <!-- Latest compiled and minified CSS -->
+<style>
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+
+
+
+.topleft {
+  top: 100px;
+  left: 130px;
+  font-size: 110px;
+}
+.paragraph{
+  top: 230px;
+  left: 135px;
+  font-size: 20px;
+  font-weight: 10;
+}
+
+
+
+
+		   .para{
+  top: 270px;
+  left: 135px;
+  font-size: 20px;
+  font-weight: 10;
+}
+		   .topp {
+	
+  top: 150px;
+  left: 130px;
+  font-size: 90px;
+}
+
+
+
+
+</style>
+           
+	</head><ul class="topnav">
   <li><a class="active" href="index.php">Home</a></li>
   <li><a href="answer_question.php"> Take Poll</a></li>
   <li><a href="feedback2.html">Give feedback</a></li>
   
   <li><a href="inquiry.html">Inquiry</a></li>
-    <li><a href="Attachmentdownload.php">Download</a></li>
+   <li><a href="Attachmentdownload.php">Download</a></li>
   <li class="right"><a href="login.php">Are you Speaker?</a></li>
    
   </ul>
-  <a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-google"></a>
-<p class="bottomleft"> Copyright 2019, Software Engineering Course, POLL ME. </p>
-<p class="fnt"> Thank you for your answer !</p>'
+
+
+<p class="para"> Thank you for your answer. It will increase the number of times each answer was submitted in this session.<br></p>'
 ?>
