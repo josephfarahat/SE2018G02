@@ -75,7 +75,7 @@ if ($result->num_rows > 0) {
 		  echo "<h4>&nbsp;&nbsp;&nbsp;&nbsp;" .$row["ID"]. "-". $row["question"]."</h4>" ;
     }
 } else {
-    echo "There is no inquiries saved";
+    echo "<h2>&nbsp;There is no inquiries saved</h2>";
 }
 
 $conn->close();
@@ -83,7 +83,7 @@ $conn->close();
 
 <html> <body>
 <br>
-<h5>&nbsp; If you wish to clear the inquiry, please click on the clear button below</h5>
+<h4>&nbsp; If you wish to clear the inquiry, please click on the clear button below</h4>
 <form method="post" action="delete_inquir.php">
 <input type="submit" id='delete' class="button button1" style="margin-left:50px;" name="delete" value='clear'></input>
 </body>
