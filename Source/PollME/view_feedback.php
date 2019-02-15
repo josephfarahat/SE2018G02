@@ -43,7 +43,7 @@ include ('security.php');
   <li class="right"><a href="logout.php">Logout </a></li>
   </ul>
    
-<p class="bottomleft"> Copyright 2019, Software Engineering Course, POLL ME. </p>
+
 
 
 
