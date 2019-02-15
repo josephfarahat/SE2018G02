@@ -1,3 +1,4 @@
+
 <?php  include ('security.php'); ?>
 <?php
 echo '<!DOCTYPE html>
@@ -119,8 +120,8 @@ body {
         function viewGraph(){
 $(".column").css("height","0");
 $("table tr").each(function(index) {
-var ha = $(this).children("td").eq(1).text().split("%")[0];
-$(".col"+index).animate({height: ha+"%"}, 1500).html("<div>"+ha+"%</div>");
+var ha = $(this).children("td").eq(1).text();
+$(".col"+index).animate({height: ha+"%"}, 1500).html("<div>"+ha+"</div>");
 });
 }
 $(document).ready(function(){
@@ -131,10 +132,8 @@ viewGraph();
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
            <link rel="stylesheet"
@@ -148,13 +147,13 @@ viewGraph();
   <li><a href="view_feedback.php">View Feedback</a></li>
   <li><a href="view_inq.php">View Inquiry</a></li>
    <li><a href="Attachmentupload.php">Upload files</a></li>
-  <li class="right"><a href="logout.php">logout </a></li>
+  <li class="right"><a href="logout.php">Logout </a></li>
   </ul>
   </body>';
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "poll";
+$servername = "sql202.epizy.com";
+$username = "epiz_23357401";
+$password = "jpvgo0IE";
+$dbname = "epiz_23357401_Poll";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -190,18 +189,18 @@ if ($result2->num_rows > 0) {
 <table>
 <caption>Question '.$s.' as precentage (%)</caption>
 <tbody>
-<tr><td>Answer 1</td><td>'.ceil($a*100/$no).'%</td><td style="background-color:#6dca64"></td></tr>
-<tr><td>Answer 2</td><td>'.ceil($b*100/$no).'%</td><td style="background-color:#6867db"></td></tr>
-<tr><td>Answer 3</td><td>'.ceil($c*100/$no).'%</td><td style="background-color:#d2d742"></td></tr>
-<tr><td>Answer 4</td><td>'.ceil($d*100/$no).'%</td><td style="background-color:#0940BE"></td></tr>
-<tr><td>Answer 5</td><td>'.ceil($e*100/$no).'%</td><td style="background-color:#ee82ee"></td></tr>
-<tr><td>Answer 6</td><td>'.ceil($f*100/$no).'%</td><td style="background-color:#dd465e"></td></tr>
+<tr><td>Answer 1</td><td>'.ceil($a*100/$no).'</td><td style="background-color:#6dca64">%</td></tr>
+<tr><td>Answer 2</td><td>'.ceil($b*100/$no).'</td><td style="background-color:#6867db">%</td></tr>
+<tr><td>Answer 3</td><td>'.ceil($c*100/$no).'</td><td style="background-color:#d2d742">%</td></tr>
+<tr><td>Answer 4</td><td>'.ceil($d*100/$no).'</td><td style="background-color:#0940BE">%</td></tr>
+<tr><td>Answer 5</td><td>'.ceil($e*100/$no).'</td><td style="background-color:#ee82ee">%</td></tr>
+<tr><td>Answer 6</td><td>'.ceil($f*100/$no).'</td><td style="background-color:#dd465e">%</td></tr>
 </tbody></table>
 <div class="RightBar">
 <div class="grafico">
-<div class="riga" style="top:25%"><div>75%</div></div>
-<div class="riga" style="top:50%"><div>50%</div></div>
-<div class="riga" style="top:75%"><div>25%</div></div>
+<div class="riga" style="top:25%"><div></div></div>
+<div class="riga" style="top:50%"><div></div></div>
+<div class="riga" style="top:75%"><div></div></div>
 ';
 if($i == 0)
 {echo '
