@@ -261,7 +261,7 @@ span.QNo {
  <div class='survey-question-wrapper  multiple-choice-question '>
  </ul>
         <h2>
-            Answer Question!
+            This is a quick question during the presentation, please give your answer in the following box: 
         </h2>
 <form action ='insta.php' method='GET' >
     ";
@@ -316,30 +316,3 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
  echo "
-   
-		
-		<div class='survey-question-wrapper  multiple-choice-question '>
-        <h2>
-            Please leave your answer here!
-        </h2>
-        <form action ='insta.php' method='GET'>
-
-            <div class='answer-options'>
-                <input type='text' class='form-control' required='' name='questions' placeholder='Your answer'>
-            </div>
-
-            
-                 
-            </div>
-            <button class='add-question-btn' type='submit'>Submit</button>
-        </form>
-    </div>
-
-
-</div>
-		
-		
- </body>
-</html>";
-     
-?>
