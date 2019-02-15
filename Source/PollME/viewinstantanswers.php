@@ -78,7 +78,7 @@ if ($result->num_rows > 0) {
 } else {
     echo "<h3>&nbsp;There is no answers saved</h3>";
 }
-
+//for way 4
 $conn->close();
 ?>
 
